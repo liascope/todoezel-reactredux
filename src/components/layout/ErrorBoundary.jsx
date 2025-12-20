@@ -25,3 +25,9 @@ export default class ErrorBoundary extends Component {
     return children;
   }
 }
+
+export function ErrorMsg (){
+  return(<div className="text-center py-10 text-red-400">
+      Oops! Something broke🚨 <button onClick={() => window.location.reload()}
+        className="ml-4 px-3 py-1 bg-red-500 text-white rounded"> Reload Page </button></div>)
+}

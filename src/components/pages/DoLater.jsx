@@ -36,8 +36,8 @@ useEffect(()=>{
  ${isSaving  ? 'max-h-20 opacity-80 translate-y-0 px-10 py-2'  : 'max-h-0 opacity-0 -translate-y-2 px-0 py-0'}`}
     >
   Tasks saved for {savedDate}</div>
-
-      <div className="w-full bg-emerald-400  hover:bg-sky-400 transition-colors shadow-2xl duration-300 ease-in-out h-fit px-11 cursor-pointer text-center rounded-sm sm:rounded-md my-5 mb-2 sm:my-9 sm:py-2 py-1 text-sm sm:text-lg "><Link to="/saved"> SHOW SAVED TASKS 🔍</Link></div>
+  
+<Link to="/saved"><div className="w-full bg-emerald-400  hover:bg-sky-400 transition-colors shadow-2xl duration-300 ease-in-out h-fit px-11 cursor-pointer text-center rounded-sm sm:rounded-md my-5 mb-2 sm:my-9 sm:py-2 py-1 text-sm sm:text-lg "> SHOW SAVED TASKS 🔍</div></Link>
 
       <div className="flex flex-row justify-end items-center mt-5">
      
