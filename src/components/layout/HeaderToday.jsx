@@ -40,7 +40,7 @@ if (pathname === '/today') {
 
     {todaysHeaderOpen
   ? `${notDeletedTasks?.every(task => task.done) ? 'All done for Today!' : "Todays Todoes🟢"}`
-  : notDeletedTasks?.length > 0 ? `${notDeletedTasks?.every(task => task.done) ? 'You did 100%!' : notDeletedTasks[0]?.task}` : 'No Tasks for today.'}
+  : notDeletedTasks?.length > 0 ? `${notDeletedTasks?.every(task => task.done) ? 'You did 100%!' : notDeletedTasks[0]?.task}` : 'No Tasks for today 📭'}
 
     </span>
 {notDeletedTasks?.length > 0 && <> <span className="ml-3 w-fit">

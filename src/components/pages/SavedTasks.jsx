@@ -13,7 +13,7 @@ export default function SavedTasks(){
 
     return (
     <ul className="list-none mx-1 my-1 sm:mx-8 sm:my-10 text-center">
-    <li className='text-emerald-400/50 uppercase text-center font-extrabold mt-10' >{savedTasks.length > 0 ? 'Your Saved Tasks or Notes 🗂️' : 'No Saved Tasks or Notes 🗂️' }</li>
+    <li className='uppercase text-center font-extrabold mt-10' >{savedTasks.length > 0 ? 'Your Saved Tasks or Notes 🗂️' : 'No Saved Tasks or Notes 🗂️' }</li>
   {savedTasks.length > 0 && (
   sortedTasks.map((entry) => (
     <li
