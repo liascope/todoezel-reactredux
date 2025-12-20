@@ -13,12 +13,12 @@ export default function SavedTasks(){
 
     return (
     <ul className="list-none mx-1 my-1 sm:mx-8 sm:my-10 text-center">
-    <li className='text-emerald-400/50 uppercase text-center font-extrabold widest mt-10' >{savedTasks.length > 0 ? 'Your Saved Tasks or Notes 🗂️' : 'No Saved Tasks or Notes 🗂️' }</li>
+    <li className='text-emerald-400/50 uppercase text-center font-extrabold mt-10' >{savedTasks.length > 0 ? 'Your Saved Tasks or Notes 🗂️' : 'No Saved Tasks or Notes 🗂️' }</li>
   {savedTasks.length > 0 && (
   sortedTasks.map((entry) => (
     <li
       key={entry.date}
-      className="odd:bg-black/30 z-10 even:bg-black/50 text-justify mx-2 sm:mx-16 px-3 sm:px-16 sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between tracking-widest font-medium hover:bg-black/20"
+      className="odd:bg-black/30 z-10 even:bg-black/50 text-justify mx-2 sm:mx-16 px-3 sm:px-16 sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between font-medium hover:bg-black/20"
     ><span>
       <strong className="mx-1 sm:mx-4">{entry.date} ▶ </strong> 
      {entry.tasks.map((t, i) => (

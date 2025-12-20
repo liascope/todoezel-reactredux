@@ -6,7 +6,7 @@ export default function ModalContent ({onClose}) {
   "role="dialog"
       aria-modal="true" >
     <div className="sticky top-0 w-full flex flex-row justify-between items-center py-3 px-7 rounded-b-lg bg-emerald-400/90 backdrop-blur-3xl">
-      <h2 className="tracking-widest text-2xl sm:text-3xl py-2 rounded-r-2xl">Todoezel-App</h2>
+      <h2 className=" text-2xl sm:text-3xl py-2 rounded-r-2xl">Todoezel-App</h2>
       <button 
         onClick={onClose} 
         className="cursor-pointer border-l-2 pl-2 text-2xl sm:text-4xl hover:text-red-700 transition-colors duration-200 py-2 rounded-l-2xl "

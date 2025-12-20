@@ -36,11 +36,11 @@ if (pathname === '/today') {
 
   <div className={` flex items-center ${notDeletedTasks?.length > 0 ? 'justify-center' : 'justify-between'} mr-2 sm:px-20 w-[70%]`}>
 
-    <span className={`${todaysHeaderOpen ? 'bg-sky-400/40' :'bg-amber-400/40'} mask-r-from-80% py-2 px-4 text-xs sm:text-xl font-black tracking-wide flex-1 max-w-lg truncate`}> 
+    <span className={`${todaysHeaderOpen ? 'bg-sky-400/40' :'bg-amber-400/40'} mask-r-from-80% py-2 px-4 text-xs sm:text-xl font-black flex-1 max-w-lg truncate`}> 
 
     {todaysHeaderOpen
   ? `${notDeletedTasks?.every(task => task.done) ? 'All done for Today!' : "Todays Todoes🟢"}`
-  : notDeletedTasks?.length > 0 ? `${notDeletedTasks?.every(task => task.done) ? 'You did 100%!' : notDeletedTasks[0]?.task}` : `No Tasks for today | ${today}`}
+  : notDeletedTasks?.length > 0 ? `${notDeletedTasks?.every(task => task.done) ? 'You did 100%!' : notDeletedTasks[0]?.task}` : 'No Tasks for today.'}
 
     </span>
 {notDeletedTasks?.length > 0 && <> <span className="ml-3 w-fit">

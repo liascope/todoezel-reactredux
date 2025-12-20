@@ -31,7 +31,7 @@ return (<>  {confirm && <Confirm clickYes={()=>{setTodoes((prev) => prev.filter(
 disabledOnDefault={!maxReached} textSize="text-xs" > <BinIcon maxReached={maxReached}/>
 </Button> </div>
             </div>
-             {error ? (<div className='text-center'>Storage Problem.</div>) : todoes.length === 0 ? (<div className='text-emerald-400/50 text-center uppercase font-extrabold widest mt-5'>
+             {error ? (<div className='text-center'>Storage Problem.</div>) : todoes.length === 0 ? (<div className='text-center uppercase font-extrabold mt-5'>
  {type === 'todoes' ? 'No Todoes / Notes Yet 📋' : type === 'shopItem' ? 'No Shop Items Yet 🛒' : ''}</div>
 ) : (
     <ToggleList

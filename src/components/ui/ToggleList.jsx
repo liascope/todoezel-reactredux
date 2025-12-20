@@ -14,7 +14,7 @@ export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, m
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
-            className="even:bg-black/30 odd:bg-black/50 text-left mx-2 sm:mx-16 px-3 sm:px-16 text-sm sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between sm:tracking-wider sm:font-medium hover:bg-black/20"
+            className="even:bg-black/30 odd:bg-black/50 text-left mx-2 sm:mx-16 px-3 sm:px-16 text-sm sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between sm:font-medium hover:bg-black/20"
             onClick={() =>
               setToggleItems((prev) => ({ ...prev, [task.id]: !prev[task.id] }))
             }

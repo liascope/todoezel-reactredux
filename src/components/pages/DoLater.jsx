@@ -32,7 +32,7 @@ useEffect(()=>{
   return (
     <div className="max-w-screen p-1 sm:px-5">
        <div className={`transition-all duration-500 ease-out backdrop-blur-2xl bg-stone-700/25 shadow-lg shadow-sky-600
-    rounded-xl text-amber-600 font-medium widest uppercase text-center
+    rounded-xl text-amber-600 font-medium uppercase text-center
  ${isSaving  ? 'max-h-20 opacity-80 translate-y-0 px-10 py-2'  : 'max-h-0 opacity-0 -translate-y-2 px-0 py-0'}`}
     >
   Tasks saved for {savedDate}</div>
@@ -63,7 +63,7 @@ useEffect(()=>{
           />
         </div>
         {doLater.length === 0
-          ? <div className='text-emerald-400/50 uppercase font-extrabold widest'>Add Todoes & Save The Date 📆</div>
+          ? <div className='uppercase font-extrabold'>Add Todoes & Save The Date 📆</div>
           : <ToggleList tasks={doLater}  onDelete={(id) =>
       setDoLater((prev) => prev.filter((item) => item.id !== id))
     }   toggle={false} />}
