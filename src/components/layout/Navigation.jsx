@@ -33,8 +33,8 @@ const links = [
           </Link>
         ))}
       </nav>
-        <p className="my-1 text-xs text-stone-800/60 bg-amber-50/50 text-shadow-lg font-bold">
-          ToDoeZel App | © 2025 <span className='cursor-pointer'>Liascope </span>. All rights reserved.
+        <p className="py-1 text-xs text-stone-700/50 bg-stone-400 text-shadow-lg backdrop-blur-3xl font-bold">
+          Todoezel | © 2025 <span className='cursor-pointer'>Liascope </span>
         </p></footer>
   )
  }
