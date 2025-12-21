@@ -21,7 +21,7 @@ export default function Header(){
  <div className={`fixed inset-0 w-screen h-screen z-[-1] transition-opacity duration-500 ${
           bgLoaded ? "opacity-100" : "opacity-60 bg-stone-600/80 backdrop-blur-3xl"
         }`}>
-      <img src="/todoezelbg.jpg" alt="Background" className="w-full h-full object-cover object-center invert-20 " onLoad={() => setBgLoaded(true)}/>
+      <img src="/todoezelbg.jpg" alt="Background" className="w-full h-screen object-cover object-center invert-20 " onLoad={() => setBgLoaded(true)}/>
     </div>
 {open && <ModalContent onClose={() => setOpen(false)} />}</>
 }

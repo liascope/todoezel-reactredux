@@ -8,12 +8,12 @@ import Navigation from "./Navigation";
 
 export default function AppLayout() {
  
-  return (<>
+  return (<div className='min-h-full flex flex-col'>
    <Header /> 
-  <Provider store={store}> 
- <HeaderToday/><div className='uppercase sm:m-7 m-2 rounded-xl shadow-lg shadow-stone-600 py-2 sm:py-7 bg-stone-700/25 max-h-screen text-center'>
-  <Outlet/></div>
-  </Provider>
+   <Provider store={store}> 
+   <HeaderToday/><div className='uppercase sm:m-7 m-2 rounded-xl shadow-lg shadow-stone-600 py-2 sm:py-7 bg-stone-700/25 max-h-screen text-center'>
+   <Outlet/></div>
+   </Provider>
    <Navigation/> 
-            </>);
+   </div>);
  }

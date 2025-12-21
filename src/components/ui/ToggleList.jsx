@@ -1,19 +1,17 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, maxHeight='max-h-93 sm:max-h-70'}) {
   const [toggleItems, setToggleItems] = useState({});
 
   return (
     <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-auto w-full sm:pb-24 pb-10 ${maxHeight}`}>
-      <AnimatePresence>
         {tasks?.map((task) => (
           <motion.li  
             key={task.id}
-            initial={{ opacity: 0, y: 5 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -5 }}
-            transition={{ duration: 0.2 }}
+            initial={{ opacity: 0, }}
+            animate={{ opacity: 1, }}
+            transition={{ duration: 0.5 }}
             className="even:bg-black/30 odd:bg-black/50 text-left mx-2 sm:mx-16 px-3 sm:px-16 text-sm sm:text-xl py-1 sm:py-4 my-2 sm:my-4 rounded flex justify-between sm:font-medium hover:bg-black/20"
             onClick={() =>
               setToggleItems((prev) => ({ ...prev, [task.id]: !prev[task.id] }))
@@ -25,6 +23,7 @@ export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, m
             <div className="flex items-center gap-1 max-h-">
               {!toggleItems[task.id] && toggle ? (
                 <input
+                  key={task.id}
                   type="checkbox"
                   checked={!!task?.done}
                   onClick={(e) => e.stopPropagation()}
@@ -32,7 +31,7 @@ export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, m
                   className="w-4 h-4 sm:w-6 sm:h-6 ml-7 sm:ml-3"
                 />
               ) : (
-                <span
+                <span 
                   onClick={(e) => {
                     e.stopPropagation();
                     onDelete?.(task.id, task);
@@ -45,7 +44,7 @@ export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, m
             </div>
           </motion.li>
         ))}
-      </AnimatePresence>
+     
     </ul>
   );
 }
