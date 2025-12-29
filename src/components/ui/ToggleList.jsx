@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 
-export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, maxHeight='max-h-93 sm:max-h-70'}) {
+export default function ToggleList({ tasks, onDelete, onToggle, toggle = true, maxHeight='max-h-113 sm:max-h-113'}) {
   const [toggleItems, setToggleItems] = useState({});
 
   return (
-    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-auto w-full sm:pb-24 pb-10 ${maxHeight}`}>
+    <ul onClick={(e) => e.stopPropagation()} className={`overflow-y-auto w-full sm:pb-24 pb-12 ${maxHeight}`}>
         {tasks?.map((task) => (
           <motion.li  
             key={task.id}

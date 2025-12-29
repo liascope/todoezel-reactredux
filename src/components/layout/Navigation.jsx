@@ -33,8 +33,8 @@ const links = [
           </Link>
         ))}
       </nav>
-        <p className="py-1 text-xs text-stone-700/50 bg-stone-400 text-shadow-lg backdrop-blur-3xl font-bold">
-          Todoezel | © 2025 <span className='cursor-pointer'>Liascope </span>
+        <p className="py-1 text-xs text-stone-500/20 tracking-widest backdrop-blur-sm">
+          Todoezel | © {new Date().getFullYear()} <span className='cursor-pointer'>Liascope </span>
         </p></footer>
   )
  }

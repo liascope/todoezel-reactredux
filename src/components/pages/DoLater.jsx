@@ -65,8 +65,8 @@ useEffect(()=>{
         {doLater.length === 0
           ? <div className='uppercase font-extrabold'>Add Todoes & Save The Date 📆</div>
           : <ToggleList tasks={doLater}  onDelete={(id) =>
-      setDoLater((prev) => prev.filter((item) => item.id !== id))
-    }   toggle={false} />}
+      setDoLater((prev) => prev.filter((item) => item.id !== id)) 
+    }  maxHeight='max-h-80 sm:max-h-60' toggle={false} />}
       </div>
     </div>
   )

@@ -11,9 +11,9 @@ export default function SavedTasks(){
 
  const sortedTasks = savedTasks?.slice().sort((a, b) => new Date(a.date) - new Date(b.date));
 
-    return (
-    <ul className="list-none mx-1 my-1 sm:mx-8 sm:my-10 text-center">
-    <li className='uppercase text-center font-extrabold mt-10' >{savedTasks.length > 0 ? 'Your Saved Tasks or Notes 🗂️' : 'No Saved Tasks or Notes 🗂️' }</li>
+    return (<><h2 className='uppercase text-center font-extrabold' >{savedTasks.length > 0 ? 'Your Saved Tasks or Notes 🗂️' : 'No Saved Tasks or Notes 🗂️' }</h2>
+    <ul className="list-none mx-1 my-1 sm:mx-8 sm:my-10 text-center sm:pb-24 pb-12 max-h-125 sm:max-h-113 overflow-y-auto ">
+    
   {savedTasks.length > 0 && (
   sortedTasks.map((entry) => (
     <li
@@ -43,5 +43,5 @@ export default function SavedTasks(){
     </li>
   )))}
 
-</ul>)
+</ul></>)
 }

@@ -46,7 +46,6 @@ disabledOnDefault={!maxReached} textSize="text-xs" > <BinIcon maxReached={maxRea
         )
       )
     }
-    maxHeight={`${type === 'todoes' ? 'max-h-113 sm:max-h-113': 'max-h-120 sm:max-h-113'} `}
   />
 
 )} </>)
